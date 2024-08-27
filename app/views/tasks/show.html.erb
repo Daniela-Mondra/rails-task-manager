@@ -1,0 +1,12 @@
+<div class="container m-3">
+  <h2><%= @task.title %></h2>
+  <p class="card card-body"><%= @task.details %></p>
+
+   <div class="form-check">
+    <%= check_box_tag 'completed', 'true', @task.completed, id: 'task-completed', data: { url: '' }, class: 'form-check-input' %>
+    <%= label_tag 'task-completed', 'This task is completed', class: 'form-check-label' %>
+  </div>
+
+  <%= link_to "Back to list", tasks_path, class: 'btn btn-primary' %>
+  <%= link_to "Edit this task", edit_path, class: 'btn btn-primary m-2'  %>
+</div>
